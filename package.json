@@ -1,7 +1,6 @@
 {
   "name": "mern-crypto-app",
   "version": "1.0.0",
-  "homepage": "https://merncryptoappdemo.herokuapp.com/",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +9,7 @@
     "start": "serve -s build",
     "install-client": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +23,6 @@
     "mongoose": "^6.8.0",
     "nodemon": "^2.0.20",
     "serve": "^14.1.2"
-  }
+  },
+  "heroku-run-build-script": true
 }
