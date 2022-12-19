@@ -2,14 +2,13 @@
   "name": "mern-crypto-app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd server && nodemon server.js",
-    "start": "serve -s build",
+    "start": "serve -s ./client/build",
     "install-client": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +22,5 @@
     "mongoose": "^6.8.0",
     "nodemon": "^2.0.20",
     "serve": "^14.1.2"
-  },
-  "heroku-run-build-script": true
+  }
 }
