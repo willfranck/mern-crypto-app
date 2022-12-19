@@ -1,0 +1,70 @@
+.spacerA,
+.spacerB {
+    display: none;
+    background-color: transparent;
+}
+
+
+@media screen and (min-width: 40em) {
+  .crypto-card-container {
+  	grid-template-columns: repeat(2, auto);
+  }
+}
+
+
+@media screen and (min-width: 52em) {
+  .crypto-card-container {
+  	grid-template-columns: repeat(3, auto);
+  }
+
+  .spacerA {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+  }
+  
+  .spacerB {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+  }
+}
+
+
+@media screen and (min-width: 70em) {
+  .crypto-card-container {
+  	grid-template-columns: repeat(4, auto);
+  }
+
+  .spacerA {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+  }
+  
+  .spacerB {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 106em) {
+  .crypto-card-container {
+  	grid-template-columns: repeat(6, auto);
+  }
+
+  .spacerA {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+  }
+  
+  .spacerB {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+}
