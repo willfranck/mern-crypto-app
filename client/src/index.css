@@ -73,7 +73,7 @@ body {
 }
 
 #root {
-  position: relative;
+  position: fixed;
   inset: 0;
   background-image: url('./assets/blockchain-bg.webp');
   background-size: cover;
