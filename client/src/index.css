@@ -74,7 +74,8 @@ body {
 
 #root {
   position: relative;
-  background-image: url('./assets/blockchain-bg.jpg');
+  inset: 0;
+  background-image: url('./assets/blockchain-bg.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
