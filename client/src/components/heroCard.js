@@ -13,7 +13,6 @@ function HeroCard() {
 			<div>
 				<h3>Current Status:</h3>
 				<ul>
-					<li>Rose is still evaluating</li>
 					<li>Frontend conducting API fetch every 30s</li>
 					<li>Backend server and MongoDB configured</li>
 					<li>Currently configuring server side API fetch</li>
