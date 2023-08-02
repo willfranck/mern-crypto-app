@@ -1,9 +1,8 @@
 const express = require('express')
-const app = express()
+const coinRouter = express.Router()
 const coinModel = require('../models/currency')
 
-
-app.get('/coins', async (req, res) => {
+coinRouter.get('/coins', async (req, res, next) => {
   const coins = await coinModel.find({})
 
   try {
@@ -13,7 +12,7 @@ app.get('/coins', async (req, res) => {
   }
 })
 
-app.post('/coins', async (req, res) => {
+coinRouter.put('/coins', async (req, res, next) => {
   const coin = new coinModel(req.body)
 
   try {
@@ -24,7 +23,7 @@ app.post('/coins', async (req, res) => {
   }
 })
 
-app.patch('/coins/:uuid', async (req, res) => {
+coinRouter.patch('/coins/:uuid', async (req, res, next) => {
   try {
     await coinModel.updateMany({"uuid": req.params.uuid}, req.body)
     await coinModel.save()
@@ -34,7 +33,7 @@ app.patch('/coins/:uuid', async (req, res) => {
   }
 })
 
-app.delete('/coins/:id', async (req, res) => {
+coinRouter.delete('/coins/:id', async (req, res, next) => {
   try {
     const coin = await coinModel.findByIdAndDelete(req.params.id)
 
@@ -45,4 +44,4 @@ app.delete('/coins/:id', async (req, res) => {
   }
 })
 
-module.exports = app
+module.exports = coinRouter

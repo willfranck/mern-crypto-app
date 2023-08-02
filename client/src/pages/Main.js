@@ -7,7 +7,6 @@ import HeroCard from '../components/heroCard'
 function Main() {
   return (
     <main className='page-container flex'>
-      {/* <SideNav /> */}
       <HeroCard />
       <CryptoCardGrid />
     </main>
